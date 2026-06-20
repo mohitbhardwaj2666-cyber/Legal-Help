@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useNavigate, useParams } from 'react-router-dom';
-import { Scale, Briefcase, Users, Hop as Home, Calendar, CircleCheck as CheckCircle, Menu, X, ChevronRight, Phone, Mail, MapPin, Clock, Shield, Award, BookOpen, ArrowLeft, MessageCircle, Globe, CreditCard, Building2, Gavel, Landmark, FileText, ChevronDown } from 'lucide-react';
+import { Scale, Briefcase, Users, Hop as Home, Calendar, CircleCheck as CheckCircle, Menu, X, ChevronRight, Phone, Mail, MapPin, Clock, Shield, Award, BookOpen, ArrowLeft, MessageCircle, Globe, Landmark, ChevronDown } from 'lucide-react';
 import { supabase } from './lib/supabase';
 import { I18nProvider, useI18n } from './lib/i18n';
 import type { User } from '@supabase/supabase-js';
@@ -1476,7 +1476,7 @@ function PrivacyView() {
   );
 }
 
-type CaseCategory = 'Civil' | 'Criminal' | 'Corporate' | 'RERA';
+//type CaseCategory = 'Civil' | 'Criminal' | 'Corporate' | 'RERA';
 
 const CASE_STUDIES = [
   {

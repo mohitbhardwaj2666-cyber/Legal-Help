@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useNavigate, useParams } from 'react-router-dom';
-import { Scale, Briefcase, Users, Hop as Home, Calendar, CircleCheck as CheckCircle, Menu, X, ChevronRight, Phone, Mail, MapPin, Clock, Shield, Award, BookOpen, ArrowLeft, MessageCircle, Globe, Landmark, ChevronDown } from 'lucide-react';
+import { Scale, Briefcase, Users, Hop as Home, Calendar, CircleCheck as CheckCircle, Menu, X, ChevronRight, Phone, Mail, MapPin, Clock, Shield, Award, BookOpen, ArrowLeft, MessageCircle, Globe, Landmark, ChevronDown, Gavel, TrainFront, Flag } from 'lucide-react';
 import { supabase } from './lib/supabase';
 import { I18nProvider, useI18n } from './lib/i18n';
 import type { User } from '@supabase/supabase-js';
@@ -65,8 +65,7 @@ function AppContent() {
                 <Scale size={24} />
               </div>
               <div>
-                <h1 className="font-bold text-xl tracking-tight text-slate-900">Advocate Mohit Bhardwaj</h1>
-                <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">District Courts</p>
+                <h1 className="font-bold text-xl tracking-tight text-slate-900">Bhardwaj & Singh Assocaites</h1>
               </div>
             </Link>
 
@@ -185,7 +184,7 @@ function AppContent() {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center text-white mb-4">
                 <Scale size={24} className="mr-2" />
-                <span className="font-bold text-xl tracking-tight">Advocate Mohit Bhardwaj</span>
+                <span className="font-bold text-xl tracking-tight">Bhardwaj & Singh Assocaites</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
                 Providing strategic, results-driven legal counsel across District Courts. Specializing in RERA, Matrimonial, Consumer, and Commercial Litigation.
@@ -226,7 +225,7 @@ function AppContent() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-12 pt-8 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; {new Date().getFullYear()} Advocate Mohit Bhardwaj. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Bhardwaj & Singh Assocaites. All rights reserved.</p>
             <div className="space-x-4 mt-4 md:mt-0">
               <Link to="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
@@ -257,14 +256,14 @@ function HomeView({ navigateTo }: { navigateTo: (page: Page) => void }) {
           <div className="md:w-3/5 pr-0 md:pr-12">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-sm font-medium mb-6">
               <Shield size={14} className="mr-2 text-blue-400" />
-              Trusted Legal Representation in District Courts
+              Trusted Legal Representation
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Strategic Counsel.<br />
               <span className="text-slate-400">Decisive Results.</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
-              Specialized litigation and advisory services focusing on Real Estate (RERA), Matrimonial Disputes, Consumer Protection, and Commercial Law across District Courts.
+              Specialized litigation and advisory services focusing on Real Estate (RERA), Matrimonial Disputes, Consumer Protection, and Commercial Law.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <button
@@ -419,6 +418,46 @@ function AboutView({ navigateTo }: { navigateTo: (page: Page) => void }) {
             </div>
           </div>
         </div>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mt-8">
+  <div className="md:flex">
+    <div className="md:w-2/5 bg-slate-200 relative min-h-[400px]">
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-800 text-slate-300 p-8 text-center">
+        <Scale size={64} className="mb-6 opacity-50" />
+        <p className="text-sm font-medium tracking-widest uppercase mb-2">Advocate</p>
+        <h2 className="text-3xl font-bold text-white">Akanksha Singh</h2>
+        <p className="mt-4 italic">"Every family deserves dignity, even in the hardest moments of separation."</p>
+      </div>
+    </div>
+    <div className="md:w-3/5 p-8 md:p-12 lg:p-16">
+      <h1 className="text-3xl font-bold text-slate-900 mb-6">Profile & Philosophy</h1>
+      <div className="w-12 h-1 bg-blue-700 rounded mb-8"></div>
+      <div className="prose prose-slate prose-lg">
+        <p className="text-slate-600 mb-6 leading-relaxed">
+          As a compassionate yet firm advocate in civil and matrimonial law, I bring sensitivity, patience, and strategic clarity to cases that touch the most personal parts of a client's life. My practice is built on the understanding that family law is never just about legal outcomes — it's about people rebuilding their lives with dignity.
+        </p>
+        <p className="text-slate-600 mb-6 leading-relaxed">
+          My approach combines empathetic counseling with assertive courtroom representation. Whether guiding a client through the emotional weight of a divorce, protecting someone from domestic violence, or negotiating custody and maintenance, I ensure every client feels heard, protected, and genuinely represented — not just processed as a case file.
+        </p>
+        <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4 flex items-center">
+          <Award size={20} className="mr-2 text-blue-700" /> Professional Focus
+        </h3>
+        <ul className="list-none space-y-2 text-slate-600">
+          <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-600" /> Matrimonial & Divorce Proceedings</li>
+          <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-600" /> Domestic Violence (PWDVA) Cases</li>
+          <li className="flex items-center"><CheckCircle size={16} className="mr-2 text-green-600" /> Child Custody & Maintenance Matters</li>
+        </ul>
+      </div>
+      <div className="mt-12 pt-8 border-t border-slate-100">
+        <button
+          onClick={() => navigateTo('contact')}
+          className="bg-slate-900 text-white px-6 py-3 rounded font-medium hover:bg-slate-800 transition-colors inline-flex items-center"
+        >
+          Get in Touch <ChevronRight size={18} className="ml-2" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   );
@@ -445,7 +484,27 @@ function ServicesView({ navigateTo }: { navigateTo: (page: Page) => void }) {
       id: 'commercial', title: 'Commercial Litigation', icon: Briefcase,
       description: 'Protecting business interests through strategic litigation and alternative dispute resolution mechanisms.',
       details: ['Breach of contract suits', 'Arbitration & Conciliation', 'Recovery suits (Order 37)', 'Insolvency proceedings (NCLT)']
-    }
+    },
+    {
+  id: 'criminal', title: 'Criminal Case', icon: Gavel,
+  description: 'Robust defense and representation in criminal proceedings, from bail applications to full trial.',
+  details: ['Anticipatory & regular bail', 'FIR quashing petitions', 'Trial defense & cross-examination', 'Cheque bounce (NI Act 138) cases']
+},
+{
+  id: 'property', title: 'Property Related Dispute', icon: Landmark,
+  description: 'Resolving ownership, title, partition, and possession disputes over immovable property.',
+  details: ['Title & ownership disputes', 'Partition suits', 'Illegal possession/eviction', 'Sale deed & agreement disputes']
+},
+{
+  id: 'railway', title: 'Railway Claim', icon: TrainFront,
+  description: 'Claims and compensation matters before the Railway Claims Tribunal and related forums.',
+  details: ['Accident compensation claims', 'Loss/damage of goods in transit', 'Deficiency of service claims', 'Railway Claims Tribunal representation']
+},
+{
+  id: 'armed-force', title: 'Armed Force', icon: Flag,
+  description: 'Legal support for service members and families on service, pension, and disciplinary matters.',
+  details: ['Armed Forces Tribunal matters', 'Pension & disability benefit claims', 'Court martial / disciplinary proceedings', 'Service-related grievances']
+}
   ];
 
   return (
@@ -622,60 +681,120 @@ function ContactView({ user }: { user: User | null }) {
 }
 
 function BookingView({ user, navigateTo }: { user: User | null; navigateTo: (page: Page) => void }) {
-  const [step, setStep] = useState(1);
-  const [bookingData, setBookingData] = useState({ service: 'RERA', date: '', time: '10:00', name: '', phone: '', mode: 'video' });
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
-  const [transactionId, setTransactionId] = useState('');
-  const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const [paymentConfirmed, setPaymentConfirmed] = useState(false);
+const [step, setStep] = useState(1);
+const [bookingData, setBookingData] = useState({ service: 'RERA', date: '', time: '10:00', name: '', phone: '', mode: 'video' });
+const [isProcessing, setIsProcessing] = useState(false);
+const [errorMsg, setErrorMsg] = useState('');
+const [transactionId, setTransactionId] = useState('');
+const [showConfirmModal, setShowConfirmModal] = useState(false);
+const [paymentConfirmed, setPaymentConfirmed] = useState(false);
+const [bookedTimes, setBookedTimes] = useState<string[]>([]);
+const [checkingAvailability, setCheckingAvailability] = useState(false);
 
-  const getMinDate = () => {
-    const d = new Date();
-    d.setDate(d.getDate() + 1);
-    return d.toISOString().split('T')[0];
-  };
+const ALL_TIME_SLOTS = ['10:00', '11:30', '14:00', '16:00', '17:30'];
 
-  const getMaxDate = () => {
-    const d = new Date();
-    d.setDate(d.getDate() + 60);
-    return d.toISOString().split('T')[0];
-  };
+const getMinDate = () => {
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  return d.toISOString().split('T')[0];
+};
+
+const getMaxDate = () => {
+  const d = new Date();
+  d.setDate(d.getDate() + 60);
+  return d.toISOString().split('T')[0];
+};
+
+useEffect(() => {
+  if (!bookingData.date) { setBookedTimes([]); return; }
+  let cancelled = false;
+  setCheckingAvailability(true);
+  supabase
+    .rpc('get_booked_times', { p_date: bookingData.date })
+    .then(({ data, error }) => {
+      if (cancelled) return;
+      if (error) {
+        console.error('Error checking slot availability:', error);
+        setBookedTimes([]);
+      } else {
+        const times = (data ?? []).map((row: { time: string } | string) =>
+          typeof row === 'string' ? row : row.time
+        );
+        setBookedTimes(times);
+        if (times.includes(bookingData.time)) {
+          const nextFree = ALL_TIME_SLOTS.find((t) => !times.includes(t));
+          if (nextFree) setBookingData((prev) => ({ ...prev, time: nextFree }));
+        }
+      }
+      setCheckingAvailability(false);
+    });
+  return () => { cancelled = true; };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [bookingData.date]);
 
   const handleProceedToPayment = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!bookingData.date || !bookingData.name || !bookingData.phone) { setErrorMsg("Please fill all fields."); return; }
-    setErrorMsg('');
-    setStep(2);
-  };
+  e.preventDefault();
+  if (!bookingData.date || !bookingData.name || !bookingData.phone) { setErrorMsg("Please fill all fields."); return; }
+  if (bookedTimes.includes(bookingData.time)) { setErrorMsg("That time slot was just booked by someone else. Please pick another slot."); return; }
+  setErrorMsg('');
+  setStep(2);
+};
 
-  const handlePaymentAndBook = async () => {
-    if (!user) return;
-    setShowConfirmModal(false);
-    setIsProcessing(true);
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    try {
-      const { error } = await supabase.from('bookings').insert({
+ const handlePaymentAndBook = async () => {
+  if (!user) return;
+  setShowConfirmModal(false);
+  setIsProcessing(true);
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  try {
+    const { data: inserted, error } = await supabase
+      .from('bookings')
+      .insert({
         user_id: user.id, service: bookingData.service, date: bookingData.date, time: bookingData.time,
         name: bookingData.name, phone: bookingData.phone, mode: bookingData.mode,
         status: 'Confirmed', payment_status: 'Paid', fee: 2500,
-      });
-      if (error) throw error;
-      setStep(3);
-    } catch (error) {
-      console.error("Booking error:", error);
-      setErrorMsg("Failed to complete booking. Please try again.");
-    } finally {
-      setIsProcessing(false);
+      })
+      .select('id')
+      .single();
+    if (error) {
+      if (error.code === '23505') {
+        setErrorMsg("Sorry, that slot was just taken by another client. Please go back and choose a different time.");
+        setBookedTimes((prev) => [...prev, bookingData.time]);
+        setIsProcessing(false);
+        return;
+      }
+      throw error;
     }
-  };
+    setStep(3);
+
+    if (inserted?.id) {
+      supabase.functions
+        .invoke('booking-notify', { body: { booking_id: inserted.id } })
+        .catch((notifyErr) => console.error('Notification dispatch failed (booking is still confirmed):', notifyErr));
+    }
+  } catch (error) {
+    console.error("Booking error:", error);
+    setErrorMsg("Failed to complete booking. Please try again.");
+  } finally {
+    setIsProcessing(false);
+  }
+};
 
   const handleConfirmClick = () => {
     setShowConfirmModal(false);
     setPaymentConfirmed(true);
     setTimeout(() => handlePaymentAndBook(), 300);
   };
-
+if (!user) {
+  return (
+    <div className="py-12 bg-slate-50 flex-grow">
+      <div className="max-w-md mx-auto px-4 sm:px-6 text-center mb-8">
+        <h1 className="text-2xl font-bold text-slate-900 mb-2">Sign in to book a consultation</h1>
+        <p className="text-slate-600">Please log in or create a free client account to schedule and pay for your consultation.</p>
+      </div>
+      <AuthView />
+    </div>
+  );
+}
   return (
     <div className="py-12 bg-slate-50 flex-grow">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -703,6 +822,10 @@ function BookingView({ user, navigateTo }: { user: User | null; navigateTo: (pag
                       <option value="Matrimonial">Matrimonial & Family</option>
                       <option value="Consumer">Consumer Protection</option>
                       <option value="Commercial">Commercial Dispute</option>
+                      <option value="Criminal">Criminal Case</option>
+                      <option value="Property">Property Related Dispute</option>
+                      <option value="Railway">Railway Claim</option>
+                      <option value="ArmedForce">Armed Force</option>
                       <option value="General">General Advisory</option>
                     </select>
                   </div>
@@ -743,6 +866,22 @@ function BookingView({ user, navigateTo }: { user: User | null; navigateTo: (pag
                       <option value="17:30">05:30 PM</option>
                     </select>
                   </div>
+                  <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Select Time</label>
+                  <select value={bookingData.time} onChange={(e) => setBookingData({ ...bookingData, time: e.target.value })} className="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-slate-900 outline-none">
+                  <option value="10:00" disabled={bookedTimes.includes('10:00')}>10:00 AM{bookedTimes.includes('10:00') ? ' (Booked)' : ''}</option>
+                  <option value="11:30" disabled={bookedTimes.includes('11:30')}>11:30 AM{bookedTimes.includes('11:30') ? ' (Booked)' : ''}</option>
+                  <option value="14:00" disabled={bookedTimes.includes('14:00')}>02:00 PM{bookedTimes.includes('14:00') ? ' (Booked)' : ''}</option>
+                  <option value="16:00" disabled={bookedTimes.includes('16:00')}>04:00 PM{bookedTimes.includes('16:00') ? ' (Booked)' : ''}</option>
+                 <option value="17:30" disabled={bookedTimes.includes('17:30')}>05:30 PM{bookedTimes.includes('17:30') ? ' (Booked)' : ''}</option>
+                 </select>
+                 {checkingAvailability && (
+                    <p className="text-xs text-slate-400 mt-1">Checking availability...</p>
+                     )}
+                  {!checkingAvailability && bookingData.date && bookedTimes.length === ALL_TIME_SLOTS.length && (
+                   <p className="text-xs text-red-600 mt-1">All slots on this date are booked. Please choose another date.</p>
+                    )}
+                 </div>
                 </div>
                 <div className="border-t border-slate-200 pt-6 mt-6">
                   <h3 className="text-lg font-semibold text-slate-900 mb-4">Your Details</h3>
@@ -783,7 +922,7 @@ function BookingView({ user, navigateTo }: { user: User | null; navigateTo: (pag
                   <div className="w-48 h-48 bg-white border-2 border-slate-200 rounded-xl p-3 shadow-sm">
                     <img
                       src="/upi-qr-code.png"
-                      alt="UPI QR Code for Advocate Mohit Bhardwaj consultation payment to 8527200481@yescred"
+                      alt="UPI QR Code for Bhardwaj & Singh Assocaites consultation payment to 8527200481@yescred"
                       className="w-full h-full object-contain"
                       loading="lazy"
                       decoding="async"
@@ -884,17 +1023,65 @@ interface Booking {
 
 function AuthView() {
   const [isSignUp, setIsSignUp] = useState(false);
+  const [fullName, setFullName] = useState('');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [needsConfirmation, setNeedsConfirmation] = useState(false);
+
+  const resetFields = () => {
+    setFullName('');
+    setPhone('');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+  };
+
+  const friendlyAuthError = (err: any): string => {
+    const raw = (err?.message || '').toLowerCase();
+    if (raw.includes('email not confirmed')) {
+      return 'Your email address has not been confirmed yet. Please check your inbox (and spam folder) for the confirmation link, or click "Resend confirmation email" below.';
+    }
+    if (raw.includes('invalid login credentials')) {
+      return 'Incorrect email or password. If you signed up recently, make sure you have confirmed your email first.';
+    }
+    if (raw.includes('user already registered') || raw.includes('already registered')) {
+      return 'An account with this email already exists. Please sign in instead.';
+    }
+    if (raw.includes('password') && raw.includes('6')) {
+      return 'Password must be at least 6 characters long.';
+    }
+    return err?.message || 'Authentication failed. Please try again.';
+  };
+
+  const handleResendConfirmation = async () => {
+    if (!email) {
+      setError('Enter your email above first, then click resend.');
+      return;
+    }
+    setLoading(true);
+    setError('');
+    try {
+      const { error: resendError } = await supabase.auth.resend({ type: 'signup', email });
+      if (resendError) throw resendError;
+      setSuccess('Confirmation email resent. Please check your inbox.');
+      setNeedsConfirmation(false);
+    } catch (err: any) {
+      setError(friendlyAuthError(err));
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
     setSuccess('');
+    setNeedsConfirmation(false);
     setLoading(true);
 
     try {
@@ -904,13 +1091,26 @@ function AuthView() {
           setLoading(false);
           return;
         }
-        const { error: signUpError } = await supabase.auth.signUp({
+        if (!fullName.trim() || !phone.trim()) {
+          setError('Please enter your full name and mobile number.');
+          setLoading(false);
+          return;
+        }
+        const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
           email,
           password,
+          options: {
+            data: { full_name: fullName.trim(), phone: phone.trim() },
+          },
         });
         if (signUpError) throw signUpError;
-        setSuccess('Account created successfully! You can now log in.');
-        setEmail('');
+
+        if (signUpData.user && !signUpData.session) {
+          setSuccess('Account created! Please check your email for a confirmation link before signing in.');
+          setNeedsConfirmation(true);
+        } else {
+          setSuccess('Account created successfully! You are now signed in.');
+        }
         setPassword('');
         setConfirmPassword('');
         setIsSignUp(false);
@@ -920,11 +1120,14 @@ function AuthView() {
           password,
         });
         if (signInError) throw signInError;
-        setEmail('');
-        setPassword('');
+        resetFields();
       }
     } catch (err: any) {
-      setError(err.message || 'Authentication failed. Please try again.');
+      const raw = (err?.message || '').toLowerCase();
+      if (raw.includes('email not confirmed')) {
+        setNeedsConfirmation(true);
+      }
+      setError(friendlyAuthError(err));
     } finally {
       setLoading(false);
     }
@@ -948,22 +1151,57 @@ function AuthView() {
 
           {error && (
             <div className="mb-6 bg-red-50 text-red-800 border border-red-200 rounded-md p-4 text-sm">
-              {error}
+              <p>{error}</p>
+              {needsConfirmation && (
+                <button
+                  type="button"
+                  onClick={handleResendConfirmation}
+                  disabled={loading}
+                  className="mt-2 font-medium underline hover:no-underline disabled:opacity-50"
+                >
+                  Resend confirmation email
+                </button>
+              )}
             </div>
           )}
 
           {success && (
-            <div className="mb-6 bg-green-50 text-green-800 border border-green-200 rounded-md p-4 text-sm flex items-center">
-              <CheckCircle size={18} className="mr-2" />
-              {success}
+            <div className="mb-6 bg-green-50 text-green-800 border border-green-200 rounded-md p-4 text-sm flex items-start">
+              <CheckCircle size={18} className="mr-2 mt-0.5 flex-shrink-0" />
+              <span>{success}</span>
             </div>
           )}
 
           <form onSubmit={handleAuth} className="space-y-4">
+            {isSignUp && (
+              <>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                  <input
+                    type="text"
+                    required
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    className="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition-colors"
+                    placeholder="Full Name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Mobile Number</label>
+                  <input
+                    type="tel"
+                    required
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition-colors"
+                    placeholder="+91 90000 00000"
+                  />
+                </div>
+              </>
+            )}
+
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Email Address
-              </label>
+              <label className="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
               <input
                 type="email"
                 required
@@ -975,12 +1213,11 @@ function AuthView() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
-                Password
-              </label>
+              <label className="block text-sm font-medium text-slate-700 mb-2">Password</label>
               <input
                 type="password"
                 required
+                minLength={6}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition-colors"
@@ -990,12 +1227,11 @@ function AuthView() {
 
             {isSignUp && (
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Confirm Password
-                </label>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Confirm Password</label>
                 <input
                   type="password"
                   required
+                  minLength={6}
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   className="w-full px-4 py-3 rounded-md border border-slate-300 focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition-colors"
@@ -1031,9 +1267,8 @@ function AuthView() {
                   setIsSignUp(!isSignUp);
                   setError('');
                   setSuccess('');
-                  setEmail('');
-                  setPassword('');
-                  setConfirmPassword('');
+                  setNeedsConfirmation(false);
+                  resetFields();
                 }}
                 className="text-slate-900 font-medium hover:underline"
               >
@@ -1324,7 +1559,7 @@ function TermsView() {
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 md:p-12 space-y-8">
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">1. Acceptance of Terms</h2>
-            <p className="text-slate-600 leading-relaxed">By accessing or using this website (the "Site"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Site. These Terms constitute a legally binding agreement between you and Advocate Mohit Bhardwaj ("the Advocate," "we," or "us").</p>
+            <p className="text-slate-600 leading-relaxed">By accessing or using this website (the "Site"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Site. These Terms constitute a legally binding agreement between you and Bhardwaj & Singh Assocaites ("the Advocate," "we," or "us").</p>
           </section>
 
           <section>
@@ -1348,7 +1583,7 @@ function TermsView() {
 
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">5. Intellectual Property</h2>
-            <p className="text-slate-600 leading-relaxed">All content on this Site, including text, graphics, logos, and design elements, is the property of Advocate Mohit Bhardwaj and is protected by applicable intellectual property laws. Reproduction, distribution, or modification of any content without prior written consent is prohibited.</p>
+            <p className="text-slate-600 leading-relaxed">All content on this Site, including text, graphics, logos, and design elements, is the property of Bhardwaj & Singh Assocaites and is protected by applicable intellectual property laws. Reproduction, distribution, or modification of any content without prior written consent is prohibited.</p>
           </section>
 
           <section>
@@ -1392,7 +1627,7 @@ function PrivacyView() {
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 md:p-12 space-y-8">
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">1. Introduction</h2>
-            <p className="text-slate-600 leading-relaxed">Advocate Mohit Bhardwaj ("we," "us," or "the Advocate") is committed to protecting the privacy and confidentiality of all individuals who interact with this website. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our Site or engage our services.</p>
+            <p className="text-slate-600 leading-relaxed">Bhardwaj & Singh Assocaites ("we," "us," or "the Advocate") is committed to protecting the privacy and confidentiality of all individuals who interact with this website. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our Site or engage our services.</p>
           </section>
 
           <section>
@@ -1455,7 +1690,7 @@ function PrivacyView() {
             <h2 className="text-xl font-bold text-slate-900 mb-3">9. Data Protection Contact</h2>
             <p className="text-slate-600 leading-relaxed">For any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please contact us at:</p>
             <div className="mt-3 bg-slate-50 rounded-lg p-4 border border-slate-200">
-              <p className="text-slate-900 font-medium">Advocate Mohit Bhardwaj</p>
+              <p className="text-slate-900 font-medium">Bhardwaj & Singh Assocaites</p>
               <p className="text-slate-600">Email: <a href="mailto:adv.mohit.bhardwaj1@gmail.com" className="text-blue-700 hover:underline">adv.mohit.bhardwaj1@gmail.com</a></p>
             </div>
           </section>

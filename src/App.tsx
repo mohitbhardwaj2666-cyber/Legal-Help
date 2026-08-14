@@ -65,7 +65,7 @@ function AppContent() {
                 <Scale size={24} />
               </div>
               <div>
-                <h1 className="font-bold text-xl tracking-tight text-slate-900">Bhardwaj & Singh Assocaites</h1>
+                <h1 className="font-bold text-xl tracking-tight text-slate-900">Bhardwaj & Singh Associates</h1>
               </div>
             </Link>
 
@@ -184,7 +184,7 @@ function AppContent() {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center text-white mb-4">
                 <Scale size={24} className="mr-2" />
-                <span className="font-bold text-xl tracking-tight">Bhardwaj & Singh Assocaites</span>
+                <span className="font-bold text-xl tracking-tight">Bhardwaj & Singh Associates</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
                 Providing strategic, results-driven legal counsel across District Courts. Specializing in RERA, Matrimonial, Consumer, and Commercial Litigation.
@@ -225,7 +225,7 @@ function AppContent() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-12 pt-8 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; {new Date().getFullYear()} Bhardwaj & Singh Assocaites. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Bhardwaj & Singh Associates. All rights reserved.</p>
             <div className="space-x-4 mt-4 md:mt-0">
               <Link to="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
@@ -751,7 +751,7 @@ useEffect(() => {
       .insert({
         user_id: user.id, service: bookingData.service, date: bookingData.date, time: bookingData.time,
         name: bookingData.name, phone: bookingData.phone, mode: bookingData.mode,
-        status: 'Confirmed', payment_status: 'Paid', fee: 2500,
+        status: 'Confirmed', payment_status: 'Paid', fee: 3500,
       })
       .select('id')
       .single();
@@ -811,7 +811,7 @@ if (!user) {
           {step === 1 && (
             <div className="p-8">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Schedule a Consultation</h2>
-              <p className="text-slate-600 mb-8">Consultation fee: ₹2,500 for a 45-minute session.</p>
+              <p className="text-slate-600 mb-8">Consultation fee: ₹3,500 for a 45-minute session.</p>
               {errorMsg && <div className="mb-4 text-red-600 text-sm font-medium">{errorMsg}</div>}
               <form onSubmit={handleProceedToPayment} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -909,7 +909,7 @@ if (!user) {
               <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 mb-8">
                 <div className="flex justify-between mb-4 pb-4 border-b border-slate-200">
                   <span className="text-slate-600">Consultation ({bookingData.mode})</span>
-                  <span className="font-semibold">₹2,500.00</span>
+                  <span className="font-semibold">₹3,500.00</span>
                 </div>
                 <div className="flex justify-between text-sm text-slate-500 mb-2"><span>Date</span><span>{new Date(bookingData.date).toLocaleDateString('en-IN')}</span></div>
                 <div className="flex justify-between text-sm text-slate-500"><span>Time</span><span>{bookingData.time}</span></div>
@@ -922,7 +922,7 @@ if (!user) {
                   <div className="w-48 h-48 bg-white border-2 border-slate-200 rounded-xl p-3 shadow-sm">
                     <img
                       src="/upi-qr-code.png"
-                      alt="UPI QR Code for Bhardwaj & Singh Assocaites consultation payment to 8527200481@yescred"
+                      alt="UPI QR Code for Bhardwaj & Singh Associates consultation payment to 8527200481@yescred"
                       className="w-full h-full object-contain"
                       loading="lazy"
                       decoding="async"
@@ -935,7 +935,7 @@ if (!user) {
                   <p className="text-xs text-slate-500 mb-1 uppercase tracking-wider font-medium">UPI ID</p>
                   <p className="text-lg font-bold text-slate-900 tracking-wide">8527200481@yescred</p>
                 </div>
-                <p className="text-xs text-slate-400 mt-4">Amount: ₹2,500.00</p>
+                <p className="text-xs text-slate-400 mt-4">Amount: ₹3,500.00</p>
               </div>
               <div className="mb-6">
                 <label className="block text-sm font-medium text-slate-700 mb-2">Transaction ID / Reference Number (Optional)</label>
@@ -958,7 +958,7 @@ if (!user) {
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
                   <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-8">
                     <h3 className="text-xl font-bold text-slate-900 mb-4">Confirm Payment</h3>
-                    <p className="text-slate-600 mb-6">Please confirm that you have completed the transaction of <strong>₹2,500.00</strong> to <strong>8527200481@yescred</strong>.</p>
+                    <p className="text-slate-600 mb-6">Please confirm that you have completed the transaction of <strong>₹3,500.00</strong> to <strong>8527200481@yescred</strong>.</p>
                     {transactionId && (
                       <p className="text-sm text-slate-500 mb-4">Transaction Reference: <span className="font-mono bg-slate-100 px-2 py-1 rounded">{transactionId}</span></p>
                     )}
@@ -1559,7 +1559,7 @@ function TermsView() {
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 md:p-12 space-y-8">
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">1. Acceptance of Terms</h2>
-            <p className="text-slate-600 leading-relaxed">By accessing or using this website (the "Site"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Site. These Terms constitute a legally binding agreement between you and Bhardwaj & Singh Assocaites ("the Advocate," "we," or "us").</p>
+            <p className="text-slate-600 leading-relaxed">By accessing or using this website (the "Site"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Site. These Terms constitute a legally binding agreement between you and Bhardwaj & Singh Associates ("the Advocate," "we," or "us").</p>
           </section>
 
           <section>
@@ -1574,7 +1574,7 @@ function TermsView() {
 
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">4. Consultation Bookings and Payment</h2>
-            <p className="text-slate-600 leading-relaxed mb-3">Consultations are booked through this Site at a fee of INR 2,500 per 45-minute session. Payment is required at the time of booking via the UPI payment method provided on the Site.</p>
+            <p className="text-slate-600 leading-relaxed mb-3">Consultations are booked through this Site at a fee of INR 3,500 per 45-minute session. Payment is required at the time of booking via the UPI payment method provided on the Site.</p>
             <h3 className="text-lg font-semibold text-slate-800 mb-2">4.1 Payment Terms</h3>
             <p className="text-slate-600 leading-relaxed mb-3">All consultation fees must be paid in full before the scheduled appointment. The Advocate reserves the right to reschedule or cancel a consultation if payment has not been confirmed. A booking confirmation will be issued upon successful payment.</p>
             <h3 className="text-lg font-semibold text-slate-800 mb-2">4.2 Refund Policy</h3>
@@ -1583,7 +1583,7 @@ function TermsView() {
 
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">5. Intellectual Property</h2>
-            <p className="text-slate-600 leading-relaxed">All content on this Site, including text, graphics, logos, and design elements, is the property of Bhardwaj & Singh Assocaites and is protected by applicable intellectual property laws. Reproduction, distribution, or modification of any content without prior written consent is prohibited.</p>
+            <p className="text-slate-600 leading-relaxed">All content on this Site, including text, graphics, logos, and design elements, is the property of Bhardwaj & Singh Associates and is protected by applicable intellectual property laws. Reproduction, distribution, or modification of any content without prior written consent is prohibited.</p>
           </section>
 
           <section>
@@ -1627,7 +1627,7 @@ function PrivacyView() {
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 md:p-12 space-y-8">
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">1. Introduction</h2>
-            <p className="text-slate-600 leading-relaxed">Bhardwaj & Singh Assocaites ("we," "us," or "the Advocate") is committed to protecting the privacy and confidentiality of all individuals who interact with this website. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our Site or engage our services.</p>
+            <p className="text-slate-600 leading-relaxed">Bhardwaj & Singh Associates ("we," "us," or "the Advocate") is committed to protecting the privacy and confidentiality of all individuals who interact with this website. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our Site or engage our services.</p>
           </section>
 
           <section>
@@ -1690,7 +1690,7 @@ function PrivacyView() {
             <h2 className="text-xl font-bold text-slate-900 mb-3">9. Data Protection Contact</h2>
             <p className="text-slate-600 leading-relaxed">For any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please contact us at:</p>
             <div className="mt-3 bg-slate-50 rounded-lg p-4 border border-slate-200">
-              <p className="text-slate-900 font-medium">Bhardwaj & Singh Assocaites</p>
+              <p className="text-slate-900 font-medium">Bhardwaj & Singh Associates</p>
               <p className="text-slate-600">Email: <a href="mailto:adv.mohit.bhardwaj1@gmail.com" className="text-blue-700 hover:underline">adv.mohit.bhardwaj1@gmail.com</a></p>
             </div>
           </section>
